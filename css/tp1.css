@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #f4f4f4;
+}
+
+header{
+    background-color: #000;
+    color: #fff;
+}
+
+.header-top{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 8px;
+    border-bottom: 1px solid grey;
+}
+
+.header-top a{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.header-main{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.logo{
+    position: absolute;
+    top: -18px;
+    left: 5%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.logo img{
+   width: 60px;
+}
+
+.menu{
+    padding-left: 100px;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a{
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+}
+
+.icons{
+    display: flex;
+    gap: 10px;
+}
+
+.material-icons{
+    background-color: #ffffff26;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.titulo{
+    max-width: 1200px;
+    margin: 30px auto 10px;
+    font-size: 22px;
+}
+
+.contenedores{
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card-alemania{
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card-alemania:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.contenedor-alemania{
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 20px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenedor-alemania img{
+    width: 30px;
+}
+
+.contenedor-alemania h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card-especific{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-size: 13px;
+}
+
+.left{
+    color: #777;
+}
+
+.card-right{
+    text-align: right;
+    color: #000;
+}
+
+.left p,
+.card-right p{
+    margin-bottom: 5px;
+}
+
+@media (max-width: 1000px){
+    .contenedores{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .contenedores{
+        grid-template-columns: 1fr;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .logo{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
